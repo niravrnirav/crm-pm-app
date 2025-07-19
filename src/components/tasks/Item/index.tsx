@@ -33,7 +33,7 @@ const Items = ({ id, title }: ItemsType) => {
         transform: CSS.Translate.toString(transform),
       }}
       className={clsx(
-        'px-2 py-4 bg-white shadow-md rounded-xl w-full border border-transparent hover:border-gray-200 cursor-pointer',
+        'px-2 py-4 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-md rounded-xl w-full border border-transparent hover:border-gray-200 dark:hover:border-gray-700 cursor-pointer',
         isDragging && 'opacity-50',
       )}
     >
