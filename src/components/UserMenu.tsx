@@ -1,3 +1,5 @@
+"use client"
+
 import { Avatar } from "@/components/ui/avatar"; // shadcn/ui avatar
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
