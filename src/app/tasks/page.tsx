@@ -23,16 +23,12 @@ import {
   sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 
-import { Inter } from 'next/font/google';
-
 // Components
 import Container from '@/components/tasks/Container';
 import Items from '@/components/tasks/Item';
 import Modal from '@/components/tasks/Modal';
 import Input from '@/components/tasks/Input';
 import { Button } from '@/components/tasks/Button';
-
-const inter = Inter({ subsets: ['latin'] });
 
 type DNDType = {
   id: UniqueIdentifier;
@@ -163,7 +159,7 @@ export default function TasksPage() {
       );
       // In the same container
       if (activeContainerIndex === overContainerIndex) {
-        let newItems = [...containers];
+        const newItems = [...containers];
         newItems[activeContainerIndex].items = arrayMove(
           newItems[activeContainerIndex].items,
           activeitemIndex,
@@ -173,7 +169,7 @@ export default function TasksPage() {
         setContainers(newItems);
       } else {
         // In different containers
-        let newItems = [...containers];
+        const newItems = [...containers];
         const [removeditem] = newItems[activeContainerIndex].items.splice(
           activeitemIndex,
           1,
@@ -216,7 +212,7 @@ export default function TasksPage() {
       );
 
       // Remove the active item from the active container and add it to the over container
-      let newItems = [...containers];
+      const newItems = [...containers];
       const [removeditem] = newItems[activeContainerIndex].items.splice(
         activeitemIndex,
         1,
@@ -282,7 +278,7 @@ export default function TasksPage() {
 
       // In the same container
       if (activeContainerIndex === overContainerIndex) {
-        let newItems = [...containers];
+        const newItems = [...containers];
         newItems[activeContainerIndex].items = arrayMove(
           newItems[activeContainerIndex].items,
           activeitemIndex,
@@ -291,7 +287,7 @@ export default function TasksPage() {
         setContainers(newItems);
       } else {
         // In different containers
-        let newItems = [...containers];
+        const newItems = [...containers];
         const [removeditem] = newItems[activeContainerIndex].items.splice(
           activeitemIndex,
           1,
@@ -330,7 +326,7 @@ export default function TasksPage() {
         (item) => item.id === active.id,
       );
 
-      let newItems = [...containers];
+      const newItems = [...containers];
       const [removeditem] = newItems[activeContainerIndex].items.splice(
         activeitemIndex,
         1,
