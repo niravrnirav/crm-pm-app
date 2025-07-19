@@ -50,7 +50,7 @@ export default function Modal({
             >
               <div
                 className={clsx(
-                  `overflow relative w-full max-w-lg transform rounded-xl border border-gray-200 bg-white p-6 text-left shadow-2xl transition-all`,
+                  `overflow relative w-full max-w-lg transform rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 p-6 text-left shadow-2xl transition-all`,
                   containerClasses,
                 )}
               >
@@ -60,7 +60,7 @@ export default function Modal({
           </FocusTrap>
           <motion.div
             key="desktop-backdrop"
-            className="fixed inset-0 z-30 bg-white/30 backdrop-blur-sm"
+            className="fixed inset-0 z-30 bg-white/30 dark:bg-black/60 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
