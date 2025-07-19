@@ -345,7 +345,7 @@ export default function TasksPage() {
         setShowModal={setShowAddContainerModal}
       >
         <div className="flex flex-col w-full items-start gap-y-4">
-          <h1 className="text-gray-800 text-3xl font-bold">Add Container</h1>
+          <h1 className="text-gray-800 dark:text-gray-100 text-3xl font-bold">Add Container</h1>
           <Input
             type="text"
             placeholder="Container Title"
@@ -359,7 +359,7 @@ export default function TasksPage() {
       {/* Add Item Modal */}
       <Modal showModal={showAddItemModal} setShowModal={setShowAddItemModal}>
         <div className="flex flex-col w-full items-start gap-y-4">
-          <h1 className="text-gray-800 text-3xl font-bold">Add Item</h1>
+          <h1 className="text-gray-800 dark:text-gray-100 text-3xl font-bold">Add Item</h1>
           <Input
             type="text"
             placeholder="Item Title"
@@ -371,7 +371,7 @@ export default function TasksPage() {
         </div>
       </Modal>
       <div className="flex items-center justify-between gap-y-2">
-        <h1 className="text-gray-800 text-3xl font-bold">Tasks Kanban Board</h1>
+        <h1 className="text-gray-800 dark:text-gray-100 text-3xl font-bold">Tasks Kanban Board</h1>
         <Button onClick={() => setShowAddContainerModal(true)}>
           Add Container
         </Button>
