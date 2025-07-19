@@ -35,17 +35,17 @@ const Container = ({
         transform: CSS.Translate.toString(transform),
       }}
       className={clsx(
-        'w-full h-full p-4 bg-gray-50 rounded-xl flex flex-col gap-y-4',
+        'w-full h-full p-4 bg-gray-50 dark:bg-gray-800 rounded-xl flex flex-col gap-y-4 border border-gray-200 dark:border-gray-700',
         isDragging && 'opacity-50',
       )}
     >
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-y-1">
-          <h1 className="text-gray-800 text-xl">{title}</h1>
-          <p className="text-gray-400 text-sm">{description}</p>
+          <h1 className="text-gray-800 dark:text-gray-100 text-xl">{title}</h1>
+          <p className="text-gray-400 dark:text-gray-400 text-sm">{description}</p>
         </div>
         <button
-          className="border p-2 rounded-xl shadow-lg hover:shadow-xl flex items-center justify-center"
+          className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 rounded-xl shadow-lg hover:shadow-xl flex items-center justify-center"
           {...listeners}
           aria-label="Drag Handle"
         >

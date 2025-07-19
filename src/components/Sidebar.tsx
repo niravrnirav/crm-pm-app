@@ -12,14 +12,18 @@ const NAV_LINKS = [
 
 export function Sidebar() {
   return (
-    <aside className="w-56 bg-white h-full border-r flex flex-col gap-2 p-4">
-      <div className="mb-8"><Logo /></div>
+    <aside
+      className="w-56 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 h-full border-r border-gray-200 dark:border-gray-700 flex flex-col gap-2 p-4"
+    >
+      <div className="mb-8">
+        <Logo />
+      </div>
       <nav className="flex-1 flex flex-col gap-1">
-        {NAV_LINKS.map(link => (
+        {NAV_LINKS.map((link) => (
           <NavItem key={link.href} {...link} />
         ))}
       </nav>
       {/* Could add workspace switcher, help, settings, etc. */}
     </aside>
-  );
+  )
 }
